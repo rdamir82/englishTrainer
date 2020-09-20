@@ -11,7 +11,7 @@ function getPlacePrepositionsSentences() {
 	  ["The picture hangs __ my bed.", 'higher than sth.', 'above'],
 	  ["There isn't a bridge __ the river.", 'from one side to the other side', 'across'],
 	  ["The dog ran __ the cat.", 'one follows the other', 'after'],
-	  ["The cat is __ the table." "below sth.", "under"]
+	  ["The cat is __ the table.", "below sth.", "under"]
 	  
     ];
   }
