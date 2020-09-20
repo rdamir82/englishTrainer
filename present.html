@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nati's English Trainer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+  <link rel="stylesheet" href="modal.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success mt-1">
+      <a class="navbar-brand" href="#">Nati's English Trainer - PRESENT</a>
+        <ul class="navbar-nav mr-auto">
+          <!--
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+    -->
+     
+      </div>
+    </nav>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+    <div class="card border-primary mb-3 col-md-4">
+      <div class="card-header">Fill the sentence with the correct word</div>
+      <div class="card-body">
+        <h4 class="card-title">Practise present</h4>
+        <p class="card-text">Press the "Let's learn!" button to start practising!</p>
+      </div>
+      <div class="card-footer">
+        <div id="presentTrainerButton" class="btn btn-info btn-block">Let's learn!</div>
+      </div>
+    </div>
+    </div>
+    <a href="index.html" class = "btn btn-danger btn-block">Back to main page</a>
+  </div>
+  
+
+
+  <div id="presentSentencesModal" class="d-none modal-irregular ">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Present</h5>
+          <button type="button" class="close" data-dismiss="modal" id="close-irregular-modal">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <header class="text-center mt-3">
+            <h3 id="title">Present trainer</h3>
+            <h3 class="mt-1">points:<span class="col-3" id="scoreBoard">0</span></h3>
+          </header>
+          <section id="body">
+            <main id="main" class="mt-3">
+              <div class="row">
+                <input id="sentenceDisplay" class="mt-1 form-control col-8" type="text" readonly>
+                <input id="wordDisplay" class="mt-1 form-control col-4" type="text" readonly>
+            </div>
+            </main>
+            <div class="row mt-3">
+              <div class="col-3"></div>
+              <input type="text" id="inputPresentTense" class="mt-1 form-control col-6" placeholder="present tense">
+              <div class="col-3"></div>
+            </div>
+              <div class="row mt-3">
+                <div class="col-3"></div> 
+              <button class="btn btn-success col-6" id="submit">Start</button>
+            </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="getPresentContinueSimpleSentences.js"></script>
+  <script src="presentLogic.js"></script>
+</body>
+
+</html>
