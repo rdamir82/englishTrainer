@@ -15,50 +15,37 @@
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-success mt-1">
       <a class="navbar-brand" href="#">Nati's English Trainer - IRREGULAR</a>
-        <ul class="navbar-nav mr-auto">
-          <!--
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-    -->
-     
-      </div>
+      <ul class="navbar-nav mr-auto">
     </nav>
   </div>
   <div class="container mt-5">
     <div class="row">
-    <div class="card border-primary mb-3 col-md-4">
-      <div class="card-header">Irregular verbs trainer</div>
-      <div class="card-body">
-        <h4 class="card-title">Practise irregular verbs</h4>
-        <p class="card-text">Press the "Let's learn!" button to start practising the irregular verbs.</p>
+      <div class="card border-primary mb-3 col-md-4">
+        <div class="card-header">Irregular verbs trainer</div>
+        <div class="card-body">
+          <h4 class="card-title">Practise irregular verbs</h4>
+          <p class="card-text">Press the "Let's learn!" button to start practising the irregular verbs.</p>
+        </div>
+        <div class="card-footer">
+          <div id="irregularTrainerButton" class="btn btn-info btn-block">Let's learn!</div>
+        </div>
       </div>
-      <div class="card-footer">
-        <div id="irregularTrainerButton" class="btn btn-info btn-block">Let's learn!</div>
-      </div>
-    </div>
 
-    <div class="card border-primary mb-3 col-md-4">
-      <div class="card-header">Irregular verbs meaning in Hungarian</div>
-      <div class="card-body">
-        <h4 class="card-title">Practise the meaning of irregular verbs</h4>
-        <p class="card-text">Press the "Let's learn!" button to start practising the meaning of irregular verbs.</p>
-      </div>
-      <div class="card-footer">
-        <div id="irregularHungarianButton" class="btn btn-info btn-block">Let's learn!</div>
+      <div class="card border-primary mb-3 col-md-4">
+        <div class="card-header">Irregular verbs meaning in Hungarian</div>
+        <div class="card-body">
+          <h4 class="card-title">Practise the meaning of irregular verbs</h4>
+          <p class="card-text">Press the "Let's learn!" button to start practising the meaning of irregular verbs.</p>
+        </div>
+        <div class="card-footer">
+          <div id="irregularHungarianButton" class="btn btn-info btn-block">Let's learn!</div>
+        </div>
       </div>
     </div>
-    </div>
-  <!-- Remove till update other parto of the app-->
-   <!-- <a href="index.html" class = "btn btn-danger btn-block">Back to main page</a> -->
+    <!-- Remove till update other parto of the app-->
+    <!-- <a href="index.html" class = "btn btn-danger btn-block">Back to main page</a> -->
   </div>
-  
+
 
   <div id="irregularModal" class="d-none modal-irregular ">
     <div class="modal-dialog" role="document">
@@ -72,7 +59,8 @@
         <div class="modal-body">
           <header class="text-center mt-3">
             <h3 id="title">Irregular verbs trainer</h3>
-            <h3 class="mt-1">points:<span class="col-3" id="scoreBoard">0</span></span> Help: <span class="col-3" id="helpsCount">3</span> </h3>
+            <h3 class="mt-1">points:<span class="col-3" id="scoreBoard">0</span></span> Help: <span class="col-3"
+                id="helpsCount">3</span> </h3>
           </header>
           <section id="body">
             <main id="main" class="mt-3">
@@ -87,17 +75,17 @@
             <div class="row mt-3">
               <input type="text" id="inputSimplePast" class="mt-1 form-control col-6" placeholder="Simple past">
               <input type="text" id="inputPastPerfect" class="mt-1 form-control col-6" placeholder="Past perfect">
-              <h4></h4>              
+              <h4></h4>
               <button class="btn btn btn-success col-6 mt-3" id="submit">Start</button>
               <button class="btn btn btn-success col-6 mt-3" id="help">Help</button>
             </div>
-        </section>
+          </section>
+        </div>
       </div>
     </div>
   </div>
-  </div>
 
-    <div id="irregularHungarianModal" class="d-none modal-irregular">
+  <div id="irregularHungarianModal" class="d-none modal-irregular">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -118,10 +106,10 @@
               <div class="col-3"></div>
               <button class="btn btn-lg btn-success col-6 mt-3" id="submitIrregularHungarian">Start</button>
             </div>
-        </section>
+          </section>
+        </div>
       </div>
     </div>
-  </div>
   </div>
   <script src="getIrregularWordsData.js"></script>
   <script src="irregular.js"></script>
