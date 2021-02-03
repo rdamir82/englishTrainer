@@ -4,7 +4,7 @@ function getIrregularWordsData() {
     ['become', 'became', 'become', 'válik valamivé', 'serbian', 'beginner'],
     ['break', 'broke', 'broken', 'eltör', 'serbian', 'beginner'],
     ['build', 'built', 'built', 'épít', 'serbian', 'beginner'],
-    ['buy', 'bought', 'bought', 'megvesz', 'serbian', 'beginner'],
+    ['buy', 'bought', 'bought', 'vásárol', 'serbian', 'beginner'],
     ['begin', 'began', 'begun', 'elkezd', 'početi', 'beginner'],
     ['bring', 'brought', 'brought', 'hoz', 'donosi', 'beginner'],
     ['do', 'did', 'done', 'csinál', 'serbian', 'beginner'],
