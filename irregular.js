@@ -1,14 +1,18 @@
 const wordData = getIrregularWordsData();
 
 let points = 0;
+let helps = 3
 const scoreBoard = document.getElementById('scoreBoard');
+const helpsCount = document.getElementById('helpsCount');
 
 const wordDisplay = document.getElementById('wordDisplay');
 const inputSimplePast = document.getElementById('inputSimplePast');
 const inputPastPerfect = document.getElementById('inputPastPerfect');
-const submitButton = document.getElementById('submit');
 const meaningHungarian = document.getElementById('meaningHungarian');
 const meaningSerbian = document.getElementById('meaningSerbian');
+
+const submitButton = document.getElementById('submit');
+const helpButton = document.getElementById('help');
 
 let word;
 let SimplePast;
@@ -20,10 +24,18 @@ initialisation();
 
 inputSimplePast.addEventListener('keyup', () => {
   answerValidator(inputSimplePast, SimplePast);
+  answerValidator(inputPastPerfect, PastPerfect);
+  if(areAnswesCorrect(SimplePast, PastPerfect)){
+    submitButton.click()
+  }
 });
 
 inputPastPerfect.addEventListener('keyup', () => {
   answerValidator(inputPastPerfect, PastPerfect);
+  answerValidator(inputSimplePast, SimplePast);
+  if(areAnswesCorrect(SimplePast, PastPerfect)){
+    submitButton.click()
+  }
 });
 
 inputSimplePast.addEventListener('keypress', (e) => {
@@ -70,11 +82,26 @@ submitButton.addEventListener('click', () => {
   }
 });
 
+helpButton.addEventListener('click', ()=> {
+  if(helps > 0){
+    inputSimplePast.value = SimplePast
+    inputPastPerfect.value = PastPerfect
+    helps--
+    if(helps == 0) {
+      helpButton.disabled = true;
+    }
+    helpsCount.innerText = helps
+  } else {
+    helpButton.disabled = true;
+  }
+})
+
 function correctAnswerAfter(){
   initialisation();
   submitButton.innerText = "Submit";
   points++;
   scoreBoard.innerText = points;
+  helpsCount.innerText = helps;
 }
 
 function wordPicker(wordData){
@@ -113,7 +140,10 @@ const closeIrregularModal = document.getElementById("close-irregular-modal");
 irregularTrainerButton.addEventListener("click", () => {
   initialisation();
   points = 0;
+  helps = 3;
   scoreBoard.innerText = points;
+  helpsCount.innerText = helps;
+  helpButton.disabled = false;
   toggleModal(irregularModal);
   
 });
