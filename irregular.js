@@ -23,28 +23,26 @@ let Serbian;
 initialisation();
 
 inputSimplePast.addEventListener("keyup", () => {
-  werifyAnswersAndClickSubmit();
+  werifyAnswers();
 });
 
 inputPastPerfect.addEventListener("keyup", () => {
-  werifyAnswersAndClickSubmit();
+  werifyAnswers();
 });
 
-function werifyAnswersAndClickSubmit() {
+function werifyAnswers() {
+  if (answerValidator(inputSimplePast, SimplePast)) {
+    inputPastPerfect.focus();
+  }
   answerValidator(inputPastPerfect, PastPerfect);
-  answerValidator(inputSimplePast, SimplePast);
   if (areAnswesCorrect(SimplePast, PastPerfect)) {
-    submitButton.click();
+    correctAnswerAfter();
   }
 }
 
 inputSimplePast.addEventListener("keypress", (e) => {
   afterEnterKeyfocusOn(e, inputPastPerfect);
   answerValidator(inputSimplePast, SimplePast);
-});
-
-inputPastPerfect.addEventListener("keypress", (e) => {
-  afterEnterKeyfocusOn(e, submitButton);
 });
 
 function afterEnterKeyfocusOn(e, element) {
