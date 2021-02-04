@@ -149,6 +149,7 @@ irregularTrainerButton.addEventListener("click", () => {
   helpsCount.innerText = helps;
   helpButton.disabled = false;
   toggleModal(irregularModal);
+  inputSimplePast.focus();
 });
 
 closeIrregularModal.addEventListener("click", () => {
@@ -183,6 +184,7 @@ irregularHungarianButton.addEventListener("click", () => {
   points = 0;
   scoreBoardIrregularHungarian.innerText = points;
   toggleModal(irregularHungarianModal);
+  inputIrregularHungarian.focus();
 });
 closeIrregularHungarianModal.addEventListener("click", () => {
   toggleModal(irregularHungarianModal);
