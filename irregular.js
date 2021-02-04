@@ -100,7 +100,7 @@ helpButton.addEventListener("click", () => {
 
 function correctAnswerAfter() {
   initialisation();
-  submitButton.innerText = "Submit";
+  submitButton.innerText = "Validate";
   points++;
   scoreBoard.innerText = points;
   helpsCount.innerText = helps;
@@ -214,7 +214,7 @@ submitIrregularHungarian.addEventListener("click", () => {
 
 function correctIrregHunAfter() {
   initIrregHun();
-  submitIrregularHungarian.innerText = "Submit";
+  submitIrregularHungarian.innerText = "Validate";
   points++;
   scoreBoardIrregularHungarian.innerText = points;
 }
