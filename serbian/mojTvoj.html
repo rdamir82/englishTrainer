@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nati's English Trainer</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css">
+  <link rel="stylesheet" href="../modal.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success mt-1">
+      <a class="navbar-brand" href="#">Srpski</a>
+      <ul class="navbar-nav mr-auto">
+    </nav>
+  </div>
+  <div class="container mt-5">
+    <div class="row row-cols-1 row-cols-sm-3">
+      <div class="col mb-4">
+        <div class="card h-100">
+          <div class="card-header">Rodovi I. (moj, moja, moj)</div>
+          <div class="card-body">
+            <h4 class="card-title">MOJ MOJA MOJE</h4>
+            <p class="card-text">Klikni na dugme "Nauči!".</p>
+          </div>
+          <div class="card-footer">
+            <div id="irregularTrainerButton" class="btn btn-info btn-block">Nauči!</div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card h-100">
+          <div class="card-header">Irregular verbs meaning in Hungarian</div>
+          <div class="card-body">
+            <h4 class="card-title">Practise the meaning of irregular verbs</h4>
+            <p class="card-text">Press the "Let's learn!" button to start practising the meaning of irregular verbs.</p>
+          </div>
+          <div class="card-footer">
+            <div id="irregularHungarianButton" class="btn btn-info btn-block">Let's learn!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Remove till update other parto of the app-->
+    <!-- <a href="index.html" class = "btn btn-danger btn-block">Back to main page</a> -->
+  </div>
+
+
+  <div id="irregularModal" class="d-none modal-irregular ">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">MOJ MOJA MOJE</h5>
+          <button type="button" class="close" data-dismiss="modal" id="close-irregular-modal">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <header class="text-center mt-3">
+            <h3 id="title">MOJ MOJA MOJE</h3>
+            <h3 class="mt-1">poeni:<span class="col-3" id="scoreBoard">0</span></span> pomoć: <span class="col-3"
+                id="helpsCount">3</span> </h3>
+          </header>
+          <section id="body">
+            <main id="main" class="mt-3">
+              <div class="row">
+                <input id="zadatak" class="mt-1 form-control col-12 text-center" type="text" readonly>
+                <input type="text" id="rod" class="mt-1 form-control col-6 offset-3 text-center d-none" readonly>
+              </div>
+              <div class="row">
+                <input type="text" id="meaningSerbian" class="col-6 d-none form-control">
+              </div>
+            </main>
+            <div class="row mt-3">
+              <input type="text" id="inputSimplePast" class="mt-1 form-control col-6 offset-3" placeholder="Tvoj odgovor">
+              <h4></h4>
+              <button class="btn btn btn-success col-6 mt-3" id="submit">Pošalji!</button>
+              <button class="btn btn btn-info col-6 mt-3" id="help">Pomoć!</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="irregularHungarianModal" class="d-none modal-irregular">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Irregular verbs in Hungarian</h5>
+          <button type="button" class="close" data-dismiss="modal" id="close-irregularHungarian-modal">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <header class="text-center mt-3">
+            <h4 id="irregularWordsDisplay"> </h4>
+            <h3 class="mt-1">points:<span class="col-3" id="scoreBoardIrregularHungarian">0</h3>
+          </header>
+          <section id="body">
+            <div class="row mt-3">
+              <input type="text" id="inputIrregularHungarian" class="mt-1 form-control col-12" placeholder="Hungarian">
+              <h4></h4>
+              <div class="col-3"></div>
+              <button class="btn btn-lg btn-success col-6 mt-3" id="submitIrregularHungarian">Validate</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="getMojTvojData.js"></script>
+  <script src="mojTvoj.js"></script>
+</body>
+
+</html>
