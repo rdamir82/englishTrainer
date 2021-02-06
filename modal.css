@@ -51,3 +51,8 @@
 .close:focus {
   outline: 0;
 }
+
+#good-image {
+width: 33%;
+margin-left: 33%;
+}

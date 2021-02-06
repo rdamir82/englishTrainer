@@ -1,4 +1,4 @@
-const wordData = getMojTvojData();
+const wordData = getMojData();
 
 let points = 0;
 let helps = 3;
@@ -87,12 +87,15 @@ helpButton.addEventListener("click", () => {
 });
 
 function correctAnswerAfter() {
+  good_image.src = `/serbian/img/poni_${(Math.floor(Math.random() * 18))+1}.jpg`
+  setTimeout(()=>{toggleModal(modal_content)}, 2000);
   initialisation();
   submitButton.innerText = "Validate";
   points++;
   scoreBoard.innerText = points;
   helpsCount.innerText = helps;
   rod.classList.add("d-none");
+  toggleModal(modal_content)
 }
 
 function wordPicker(wordData) {
@@ -126,6 +129,8 @@ const irregularTrainerButton = document.getElementById(
 );
 const irregularModal = document.getElementById("irregularModal");
 const closeIrregularModal = document.getElementById("close-irregular-modal");
+const modal_content = document.getElementById("modal-content");
+const good_image = document.getElementById("good-image");
 
 irregularTrainerButton.addEventListener("click", () => {
   initialisation();
