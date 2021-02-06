@@ -38,5 +38,6 @@ function getMojTvojData() {
     ['To mače je ___.', 'moje', 'bought', 'srednji rod', 'serbian', 'beginner'],
     ['To štene je ___.', 'moje', 'bought', 'srednji rod', 'serbian', 'beginner'],
     ['To biciklo je ___.', 'moje', 'bought', 'srednji rod', 'serbian', 'beginner'],
+    
   ];
 }
