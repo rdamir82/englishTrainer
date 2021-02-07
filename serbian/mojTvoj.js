@@ -87,7 +87,7 @@ helpButton.addEventListener("click", () => {
 });
 
 function correctAnswerAfter() {
-  good_image.src = `/serbian/img/correct_1.svg`
+  good_image.src = `https://rdamir82.github.io/englishTrainer/serbian/img/correct_1.jpg`
   setTimeout(()=>{toggleModal(modal_content)}, 2000);
   initialisation();
   submitButton.innerText = "Validate";
